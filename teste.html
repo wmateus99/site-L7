@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Avançado - Uma Imagem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .parallax {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .imagem-fundo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 130vh; /* um pouco maior que a tela para o efeito funcionar */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+            z-index: -1;
+        }
+
+        .conteudo {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .conteudo h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .conteudo p {
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax">
+        <div class="imagem-fundo" id="imagemFundo"></div>
+    </div>
+
+    <section class="conteudo">
+        <h1>Parallax com uma imagem</h1>
+        <p>Este efeito usa apenas uma imagem, mas com JavaScript para mover dinamicamente conforme o scroll.</p>
+    </section>
+
+    <section class="conteudo">
+        <h2>Seção extra</h2>
+        <p>Adicione mais conteúdo para testar o efeito com rolagem longa.</p>
+    </section>
+
+    <script>
+        const imagem = document.getElementById('imagemFundo');
+
+        window.addEventListener('scroll', function () {
+            const scroll = window.scrollY;
+            imagem.style.transform = `translateY(${scroll * 0.4}px)`;
+        });
+    </script>
+</body>
+</html>
