@@ -39,6 +39,17 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
+#btn-menu {
+    margin-right: 5%;
+    border: none;
+    outline: none;
+    display: none;
+    background: transparent;
+}
+#btn-menu i {
+    font-size: 42px;
+}
+
 
 .background-paralax {
     top: 0;
@@ -66,9 +77,9 @@ a {
 }
 
 .content {
-    padding: 0% 10%;
     width: 100%;
     display: flex;
+    padding: 0% 10%;
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
@@ -187,5 +198,12 @@ a {
     }
     .card-dica p {
         max-width: 650px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+    #btn-menu {
+        display: block;
     }
 }
