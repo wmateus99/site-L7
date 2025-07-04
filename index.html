@@ -1,97 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="/assets/img/logo.svg" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/logo.svg" type="image/x-icon" />
 
     <!-- SEO principal -->
     <title>L7 Company | Marketing Personalizado para sua Empresa</title>
-    <meta name="description" content="A L7 Company cuida do marketing da sua empresa com soluções criativas e sob medida. Alcance mais resultados com quem entende do seu negócio.">
-    <meta name="keywords" content="marketing digital, soluções personalizadas, agência de marketing, L7 Company, marketing para empresas">
-    <meta name="author" content="L7 Company">
+    <meta name="description" content="A L7 Company cuida do marketing da sua empresa com soluções criativas e sob medida. Alcance mais resultados com quem entende do seu negócio." />
+    <meta name="keywords" content="marketing digital, soluções personalizadas, agência de marketing, L7 Company, marketing para empresas" />
+    <meta name="author" content="L7 Company" />
 
+    <!-- Redes Sociais (Open Graph) -->
+    <meta property="og:title" content="L7 Company | Marketing Personalizado" />
+    <meta property="og:description" content="Soluções criativas e sob medida para sua empresa se destacar no digital." />
+    <meta property="og:image" content="/assets/img/logo-2.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://l7company.netlify.app/" />
 
-    <!-- Link de Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icons Remix -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvEC..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
-    <header class="header" id="headerTop">
-        <img class="logo" id="logoL7" src="/assets/img/logo-2.svg" alt="">
-        <button id="btn-menu">
+    <header class="header" id="headerTop" role="banner">
+        <a href="#inicio" aria-label="Página inicial">
+            <img class="logo" id="logoL7" src="/assets/img/logo-2.svg" alt="Logotipo da L7 Company" />
+        </a>
+        <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menuMobile">
             <i class="ri-menu-5-line"></i>
         </button>
-        <nav class="nav-menu">
-            <a href="#inicio">INÍCIO</a>
-            <a href="#servicos">SERVIÇOS</a>
-            <a href="#">BENEFÍCIOS</a>
+        <nav class="nav-menu" role="navigation" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
         </nav>
     </header>
 
-    <section class="content home" id="inicio">
-        <div class="background-paralax" id="paralax"></div>
-        <div class="box-content">
-            <main class="description">
-                <p>
-                    A <strong>L7 Company</strong> cuida do marketing da sua empresa com soluções feitas sob medida
-                </p>
-            </main>
-            <div class="nav-link">
-                <p>Somos especialistas em Social Media com mais de 5 anos de experiência</p>
-                <a href="#" class="link-button">AGENDAR REUNIÃO</a>
-            </div>
-        </div>
-    </section>
+    <div class="menu-mobile" id="menuMobile" role="navigation" aria-label="Menu Mobile">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+    </div>
 
-    <section class="content color-unic-ligth" id="servicos">
-        <h2>Veja os Serviços</h2>
-        <div class="box-content">
-            <div class="box-left-servicos">
-                <h3>Dashboards e Resultados</h3>
-                <p>
-                    Transforme dados em ações com acompanhamento inteligente e decisões assertivas
-                </p>
+    <main id="main">
+        <section class="content home" id="inicio" aria-labelledby="titulo-inicio">
+            <div class="background-paralax" id="paralax" role="presentation"></div>
+            <div class="box-content">
+                <div class="description">
+                    <p id="titulo-inicio">
+                        A <strong>L7 Company</strong> cuida do marketing da sua empresa com soluções feitas sob medida.
+                    </p>
+                </div>
+                <div class="nav-link">
+                    <p>Especialistas em Social Media com mais de 5 anos de experiência</p>
+                    <a href="#servicos" class="link-button" aria-label="Agendar reunião com a L7 Company">Agendar Reunião</a>
+                </div>
             </div>
-            <div class="box-rigth-servicos">
-                <div class="box">
-                    <img src="/assets/img/point-liner.svg" alt="">
-                    <div class="text-box">
-                        <p>Acompanhamento de métricas e resultados</p>
-                        <p>Decisões baseadas em dados reais</p>
+        </section>
+
+        <section class="content color-unic-ligth" id="servicos" aria-labelledby="titulo-servicos">
+            <h2 id="titulo-servicos">Veja os Serviços</h2>
+            <div class="box-content">
+                <div class="box-left-servicos">
+                    <h3>Dashboards e Resultados</h3>
+                    <p>Transforme dados em ações com acompanhamento inteligente e decisões assertivas.</p>
+                </div>
+                <div class="box-rigth-servicos">
+                    <div class="box">
+                        <img src="/assets/img/point-liner.svg" alt="Ícone de ponto de conexão de métricas" />
+                        <div class="text-box">
+                            <p>Acompanhamento de métricas e resultados</p>
+                            <p>Decisões baseadas em dados reais</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="content color-unic-dark" id="dicas">
-        <h2>Existe um processo para sua empresa nunca parar de vender:</h2>
-        <div class="box-content dicas-content">
-            <!-- <div class="dicas"> -->
+        <section class="content color-unic-dark" id="dicas" aria-labelledby="titulo-dicas">
+            <h2 id="titulo-dicas">Existe um processo para sua empresa nunca parar de vender:</h2>
+            <div class="box-content dicas-content">
                 <div class="card-dica">
-                    <i class="ri-shake-hands-fill"></i>
+                    <i class="ri-shake-hands-fill" aria-hidden="true"></i>
                     <h3>Aquisição</h3>
-                    <img src="/assets/img/seta.svg" alt="">
+                    <img src="/assets/img/seta.svg" alt="Seta de processo" />
                     <p>Atrair clientes certos</p>
                 </div>
                 <div class="card-dica">
-                    <i class="ri-question-answer-fill"></i>
+                    <i class="ri-question-answer-fill" aria-hidden="true"></i>
                     <h3>Engajamento</h3>
-                    <img src="/assets/img/seta.svg" alt="">
+                    <img src="/assets/img/seta.svg" alt="Seta de processo" />
                     <p>Gerar interesse</p>
                 </div>
                 <div class="card-dica">
-                    <i class="ri-arrow-go-back-fill"></i>
+                    <i class="ri-arrow-go-back-fill" aria-hidden="true"></i>
                     <h3>Retenção</h3>
-                    <img src="/assets/img/seta.svg" alt="">
+                    <img src="/assets/img/seta.svg" alt="Seta de processo" />
                     <p>Fazer o cliente voltar a comprar</p>
                 </div>
-            <!-- </div> -->
-        </div>
-    </section>  
+            </div>
+        </section>
 
-<script src="/js/script.js"></script>
+        <section class="content back-unic" id="resultados" aria-labelledby="titulo-resultados">
+            <div class="background-paralax-2" id="paralax-2" role="presentation"></div>
+            <h2 id="titulo-resultados">Ajudamos mais de 800 empresas a se destacar no digital com soluções eficazes</h2>
+            <a class="link-infor" href="#contato" aria-label="Solicitar mais informações via WhatsApp">
+                <i class="ri-whatsapp-fill" aria-hidden="true"></i> Quero mais informações
+            </a>
+        </section>
+
+        <section class="content color-unic-dark" id="contato" aria-labelledby="titulo-contato">
+            <h2 id="titulo-contato">Fale com a gente</h2>
+            <div class="passos">
+                <p>Acesse o formulário clicando no botão "Agendar Reunião"</p>
+                <p>Preencha seus dados no formulário</p>
+                <p>Receba uma ligação da nossa equipe</p>
+                <a class="link-infor" href="https://docs.google.com/forms/d/e/1FAIpQLSdYNMrIAOof_mdAHkiHcgLmcZULtrrOKlZnbPCSPN2clQtVfg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Quero mais informações</a>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>L7 Company</h3>
+                <p>Transformando ideias em soluções digitais.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>(11) 99999-9999</p>
+                <p>contato@empresaexemplo.com</p>
+                <p>São Paulo - SP</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram da L7 Company">Instagram</a><br />
+                    <a href="#" aria-label="Facebook da L7 Company">Facebook</a><br />
+                    <a href="#" aria-label="WhatsApp da L7 Company">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="ano-atual"></span> L7 Company. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>
