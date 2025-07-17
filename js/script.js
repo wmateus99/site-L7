@@ -21,7 +21,7 @@ window.addEventListener("scroll", () => {
         header.style.background = "#033468a7"
         header.style.backdropFilter = "blur(50px)"
 
-        menuMobile.style.top = "50px"
+        menuMobile.style.top = "0px"
         menuMobile.style.position = "fixed"
     } else {
         header.style.height = "100px"
